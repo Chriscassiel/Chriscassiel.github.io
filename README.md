@@ -1,21 +1,46 @@
-# Jesús Ninoc - Personal Site
+# MotoHub Platform
 
-Este repositorio contiene el código fuente para el sitio web personal de Jesús Ninoc, optimizado para SEO y listo para desplegarse en GitHub Pages.
+Plataforma moderna para entusiastas de las motos, construida con Next.js 14, Tailwind CSS y TypeScript.
 
-## Estructura
+## Funcionalidades
 
-- `index.html`: Página principal con etiquetas meta optimizadas, Open Graph y datos estructurados (Schema.org).
-- `style.css`: Hoja de estilos moderna y responsiva.
+1.  **Comparador de Motos**: Compara especificaciones técnicas de hasta 3 modelos simultáneamente.
+2.  **Equipación**: Catálogo de productos con redirección a Motocard.
+3.  **Ocasión**: Buscador de motos de segunda mano integrado con Mundimoto (referencial).
 
-## Cómo desplegar en GitHub Pages
+## Requisitos Previos
 
-1. Crea un nuevo repositorio en GitHub llamado `tu-usuario.github.io` (donde `tu-usuario` es tu nombre de usuario en GitHub).
-2. Sigue las instrucciones para subir un repositorio existente desde la línea de comandos:
+Necesitas tener instalado [Node.js](https://nodejs.org/) (versión 18 o superior) en tu ordenador para ejecutar este proyecto.
 
-```bash
-git remote add origin https://github.com/jesusninoc/jesusninoc.github.io.git
-git branch -M main
-git push -u origin main
-```
+## Instalación y Ejecución
 
-3. Tu sitio estará disponible en `https://tu-usuario.github.io/` en unos minutos.
+1.  Abre una terminal en esta carpeta (`moto-platform`).
+2.  Instala las dependencias:
+    ```bash
+    npm install
+    ```
+    *(Si este comando falla la primera vez, puedes intentar `npm install --force`)*
+
+3.  Ejecuta el servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
+
+4.  Abre tu navegador en [http://localhost:3000](http://localhost:3000).
+
+## Estructura del Proyecto
+
+-   `app/`: Contiene las páginas y el layout principal.
+    -   `comparador/`: Página del comparador.
+    -   `equipacion/`: Página de equipación.
+    -   `ocasion/`: Página de motos de ocasión.
+-   `components/`: Componentes reutilizables (Navbar, Cards, etc).
+-   `data/`: Datos de prueba (mock) para simular la base de datos.
+-   `lib/`: Utilidades generales.
+
+## Tecnologías
+
+-   **Framework**: Next.js 14 (App Router)
+-   **Estilos**: Tailwind CSS
+-   **Iconos**: Lucide React
+-   **Lenguaje**: TypeScript
