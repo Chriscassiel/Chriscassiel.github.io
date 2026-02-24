@@ -27,7 +27,8 @@ def fetch_google_trends():
     
     for item in channel.findall('item')[:10]: # Top 10 trends
         title = item.find('title').text
-        approx_traffic = item.find('ht:approx_traffic', ns).text if item.find('ht:approx_traffic', ns) is not None else "N/A"
+        traffic_node = item.find('{https://trends.google.com/trending/rss}approx_traffic')
+        approx_traffic = traffic_node.text if traffic_node is not None else "N/A"
         
         # Get description (google trends description is usually just a list of related news)
         description = item.find('description').text or ""

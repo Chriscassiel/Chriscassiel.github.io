@@ -1138,3 +1138,30 @@ body.acc-large-text {
 body.acc-dyslexic * {
     font-family: 'OpenDyslexic', sans-serif !important;
 }
+/* --- TRENDS PAGE STYLES --- */
+.trends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+.trend-card {
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.trend-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 768px) {
+    .trends-grid {
+        grid-template-columns: 1fr;
+    }
+}
