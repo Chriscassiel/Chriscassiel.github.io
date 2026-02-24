@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://motoscomparador.com/sitemap.xml
+Sitemap: https://motocomparador.github.io/sitemap.xml
