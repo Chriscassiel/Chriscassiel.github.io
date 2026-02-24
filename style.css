@@ -148,6 +148,42 @@ h3,
     flex-shrink: 0;
 }
 
+.nav-text-action {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: var(--transition);
+    user-select: none;
+}
+
+.nav-text-action:hover {
+    opacity: 1;
+    color: var(--primary);
+}
+
+.lang-toggle {
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+}
+
+.lang-toggle:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.nav-spacer {
+    flex-grow: 1;
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -995,7 +1031,7 @@ h3,
     top: calc(var(--nav-height) - 10px);
     right: 0;
     z-index: 9999;
-    display: none !important;
+    display: none;
 }
 
 #accessibility-dropdown.active {
