@@ -37,15 +37,16 @@
             style="height: 50vh; min-height: 400px; background-image: url('https://images.unsplash.com/photo-1511818310022-861036306fc6?q=80&w=2070&auto=format&fit=crop');">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Tendenze <span>Globali</span></h1>
-                <p class="hero-subtitle">Analisi quotidiana di ciò che sta muovendo il mondo oggi attraverso i dati di
+                <h1 class="hero-title" data-i18n="trendsHeroTitle">Tendenze <span>Globali</span></h1>
+                <p class="hero-subtitle" data-i18n="trendsHeroSub">Analisi quotidiana di ciò che sta muovendo il mondo
+                    oggi attraverso i dati di
                     Google Trends.</p>
             </div>
         </section>
 
         <section class="section container">
             <div class="section-header">
-                <h2 class="section-title">Cosa si cerca oggi</h2>
+                <h2 class="section-title" data-i18n="trendsSecTitle">Cosa si cerca oggi</h2>
                 <div class="controls">
                     <span id="trends-date" style="font-weight: 800; color: var(--primary);">24 Febbraio 2026</span>
                 </div>
@@ -65,43 +66,6 @@
 
     <!-- Accessibility Context (Copy from index.html if needed or rely on script.js) -->
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('trends-container');
-            const dateSpan = document.getElementById('trends-date');
-
-            // Load trends from trends.json
-            fetch('trends.json')
-                .then(response => response.json())
-                .then(data => {
-                    if (data.date) dateSpan.textContent = data.date;
-
-                    container.innerHTML = '';
-                    data.trends.forEach(item => {
-                        const card = document.createElement('div');
-                        card.className = 'glass-card trend-card';
-                        card.style.padding = '2.5rem';
-                        card.style.marginBottom = '2rem';
-
-                        card.innerHTML = `
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
-                                <h3 style="font-size: 1.8rem; color: var(--primary); margin: 0;"># ${item.title}</h3>
-                                <span style="background: rgba(255,255,255,0.1); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 800;">${item.traffic}+ Ricerche</span>
-                            </div>
-                            <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${item.paragraph}</p>
-                            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-                                <a href="${item.explore_link}" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Esplora Dati</a>
-                            </div>
-                        `;
-                        container.appendChild(card);
-                    });
-                })
-                .catch(err => {
-                    console.error('Error loading trends:', err);
-                    container.innerHTML = '<p>Errore nel caricamento delle tendenze. Riprova più tardi.</p>';
-                });
-        });
-    </script>
 </body>
 
 </html>

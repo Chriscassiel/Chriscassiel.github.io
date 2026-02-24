@@ -94,7 +94,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             btnNews: "Noticias MotoGP",
             btnNews: "Noticias MotoGP",
             navAcc: "Accesibilidad",
-            navTrends: "Tendencias"
+            navTrends: "Tendencias",
+            trendsHeroTitle: "Tendencias <span>Globales</span>",
+            trendsHeroSub: "Análisis diario de lo que mueve el mundo hoy a través de los datos de Google Trends.",
+            trendsSecTitle: "Lo más buscado hoy",
+            trendsRic: "Búsquedas",
+            trendsExplore: "Explorar Datos"
         },
         it: {
             navHome: "Inizio",
@@ -133,7 +138,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             btnNews: "Notizie MotoGP",
             btnNews: "Notizie MotoGP",
             navAcc: "Accessibilità",
-            navTrends: "Tendenze"
+            navTrends: "Tendenze",
+            trendsHeroTitle: "Tendenze <span>Globali</span>",
+            trendsHeroSub: "Analisi quotidiana di ciò che sta muovendo il mondo oggi attraverso i dati di Google Trends.",
+            trendsSecTitle: "Cosa si cerca oggi",
+            trendsRic: "Ricerche",
+            trendsExplore: "Esplora Dati"
         }
     };
 
@@ -169,10 +179,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         const usedBtn = document.querySelector('a[data-i18n="btnUsed"]');
         if (usedBtn) usedBtn.href = t.usedUrl;
 
-        // Refresh dynamic content
-        filterMotos();
-        fetchNews(); // Initial or update on lang change
-        if (document.getElementById('comparison-modal').classList.contains('active')) {
+        // Refresh dynamic content SAFELY
+        if (document.getElementById('moto-grid')) filterMotos();
+        if (document.getElementById('news-grid')) fetchNews();
+        if (document.getElementById('trends-container')) fetchTrends();
+
+        const compModal = document.getElementById('comparison-modal');
+        if (compModal && compModal.classList.contains('active')) {
             showComparison();
         }
     }
@@ -522,6 +535,52 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.body.classList.toggle('light-theme');
     });
 
+    // --- TRENDS LOGIC ---
+    async function fetchTrends() {
+        const trendsContainer = document.getElementById('trends-container');
+        if (!trendsContainer) return;
+
+        try {
+            const response = await fetch('trends.json');
+            if (!response.ok) throw new Error("Trends source not found");
+            const data = await response.json();
+
+            const dateSpan = document.getElementById('trends-date');
+            if (dateSpan && data.date) dateSpan.textContent = data.date;
+
+            renderTrends(data.trends);
+        } catch (err) {
+            console.warn("Could not load Trends:", err);
+            trendsContainer.innerHTML = '<div class="no-results">Trends update in progress...</div>';
+        }
+    }
+
+    function renderTrends(trends) {
+        const container = document.getElementById('trends-container');
+        const t = translations[currentLang];
+        container.innerHTML = '';
+
+        trends.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'glass-card trend-card';
+            card.style.padding = '2.5rem';
+            card.style.marginBottom = '2rem';
+
+            card.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
+                    <h3 style="font-size: 1.8rem; color: var(--primary); margin: 0;"># ${item.title}</h3>
+                    <span style="background: rgba(255,255,255,0.1); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 800;">${item.traffic}+ ${t.trendsRic}</span>
+                </div>
+                <p style="font-size: 1.1rem; line-height: 1.8; opacity: 0.9;">${item.paragraph}</p>
+                <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                    <a href="${item.explore_link}" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">${t.trendsExplore}</a>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
     applyLanguage(currentLang);
-    renderMotos(motoData);
+    if (document.getElementById('moto-grid')) renderMotos(motoData);
+    if (document.getElementById('trends-container')) fetchTrends();
 });
