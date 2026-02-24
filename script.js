@@ -495,33 +495,37 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // --- ACCESSIBILITY WINDOW LOGIC ---
-    const accModal = document.getElementById('acc-modal');
+    const accModal = document.getElementById('accessibility-dropdown');
     const accBtn = document.getElementById('acc-btn-simple');
     const accClose = document.getElementById('acc-modal-close');
     const btnContrast = document.getElementById('btn-contrast-new');
     const btnTextSize = document.getElementById('btn-text-size-new');
     const btnDyslexic = document.getElementById('btn-dyslexic-new');
 
-    accBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        accModal.classList.toggle('active');
-    });
+    if (accBtn && accModal) {
+        accBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            accModal.classList.toggle('active');
+        });
 
-    accClose.addEventListener('click', () => {
-        accModal.classList.remove('active');
-    });
-
-    // Close on click outside
-    document.addEventListener('click', (e) => {
-        if (accModal.classList.contains('active') && !accModal.contains(e.target) && e.target !== accBtn) {
-            accModal.classList.remove('active');
+        if (accClose) {
+            accClose.addEventListener('click', () => {
+                accModal.classList.remove('active');
+            });
         }
-    });
 
-    // Prevent closing when clicking inside the content
-    accModal.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
+        // Close on click outside
+        document.addEventListener('click', (e) => {
+            if (accModal.classList.contains('active') && !accModal.contains(e.target) && e.target !== accBtn) {
+                accModal.classList.remove('active');
+            }
+        });
+
+        // Prevent closing when clicking inside the content
+        accModal.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+    }
 
     function toggleAccOption(btn, className) {
         const isActive = document.body.classList.toggle(className);

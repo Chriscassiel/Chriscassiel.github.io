@@ -1018,21 +1018,21 @@ h3,
     position: relative;
 }
 
-#acc-modal.acc-dropdown {
+#accessibility-dropdown.acc-dropdown {
     position: absolute;
     top: calc(100% + 15px);
     right: 0;
     z-index: 5000;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0 !important;
+    visibility: hidden !important;
     transform: translateY(10px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
 }
 
-#acc-modal.acc-dropdown.active {
-    opacity: 1;
-    visibility: visible;
+#accessibility-dropdown.acc-dropdown.active {
+    opacity: 1 !important;
+    visibility: visible !important;
     transform: translateY(0);
     pointer-events: auto;
 }
