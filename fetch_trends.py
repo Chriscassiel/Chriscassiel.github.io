@@ -6,7 +6,7 @@ import os
 
 def fetch_google_trends():
     # Google Trends RSS Feed (Spain)
-    RSS_URL = "https://trends.google.com/trends/trendingsearches/daily/rss?geo=ES"
+    RSS_URL = "https://trends.google.com/trending/rss?geo=ES"
     
     print(f"Fetching trends from {RSS_URL}...")
     try:
@@ -23,7 +23,7 @@ def fetch_google_trends():
     trends = []
     
     # Namespaces for Google Trends specific tags
-    ns = {'ht': 'https://trends.google.com/trends/trendingsearches/daily'}
+    ns = {'ht': 'https://trends.google.com/trending/rss'}
     
     for item in channel.findall('item')[:10]: # Top 10 trends
         title = item.find('title').text
