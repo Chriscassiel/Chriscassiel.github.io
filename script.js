@@ -593,8 +593,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         trends.forEach(item => {
             const card = document.createElement('div');
             card.className = 'glass-card trend-card';
-            card.style.padding = '2.5rem';
-            card.style.marginBottom = '2rem';
 
             card.innerHTML = `
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
