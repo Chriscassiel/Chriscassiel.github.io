@@ -484,13 +484,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const btnDyslexic = document.getElementById('btn-dyslexic-new');
 
     accBtn.addEventListener('click', () => {
-        accModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        accModal.classList.toggle('active');
     });
 
     accClose.addEventListener('click', () => {
         accModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
     });
 
     function toggleAccOption(btn, className) {

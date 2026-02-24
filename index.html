@@ -69,6 +69,31 @@
                 <div class="lang-toggle" id="lang-toggle">
                     <span id="lang-text">ES</span>
                 </div>
+
+                <!-- Accessibility Dropdown -->
+                <div id="acc-modal" class="acc-dropdown">
+                    <div class="acc-dropdown-content glass-card">
+                        <div class="acc-header">
+                            <h3 data-i18n="accTitle">Accesibilidad</h3>
+                            <span id="acc-modal-close" class="acc-close">&times;</span>
+                        </div>
+                        <div class="acc-grid-small">
+                            <button class="acc-btn-small" id="btn-contrast-new" title="Alto Contraste">
+                                <span class="acc-icon-small">🌓</span>
+                                <span data-i18n="accContrast">Contraste</span>
+                            </button>
+                            <button class="acc-btn-small" id="btn-text-size-new" title="Texto Grande">
+                                <span class="acc-icon-small">A+</span>
+                                <span data-i18n="accTextSize">Texto</span>
+                            </button>
+                            <button class="acc-btn-small" id="btn-dyslexic-new" title="Fuente Lectura">
+                                <span class="acc-icon-small">📖</span>
+                                <span data-i18n="accDyslexic">Lectura</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="theme-toggle" id="theme-toggle">
                     <div class="toggle-circle"></div>
                 </div>
@@ -233,35 +258,6 @@
 
 
 
-    <!-- Accessibility Premium Window -->
-    <div id="acc-modal" class="modal">
-        <div class="modal-content glass-card acc-window">
-            <span id="acc-modal-close" class="modal-close">&times;</span>
-            <div class="modal-header">
-                <h2 data-i18n="accTitle">Accessibilità</h2>
-            </div>
-            <div class="acc-grid">
-                <div class="acc-item">
-                    <button class="acc-action-btn" id="btn-contrast-new">
-                        <span class="acc-icon">🌓</span>
-                        <span data-i18n="accContrast">Alto Contrasto</span>
-                    </button>
-                </div>
-                <div class="acc-item">
-                    <button class="acc-action-btn" id="btn-text-size-new">
-                        <span class="acc-icon">A+</span>
-                        <span data-i18n="accTextSize">Texto Grande</span>
-                    </button>
-                </div>
-                <div class="acc-item">
-                    <button class="acc-action-btn" id="btn-dyslexic-new">
-                        <span class="acc-icon">📖</span>
-                        <span data-i18n="accDyslexic">Fuente Lectura</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
