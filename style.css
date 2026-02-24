@@ -117,18 +117,19 @@ h3,
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 3.5rem;
+    gap: 4rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: inherit;
-    font-weight: 700;
-    font-size: 0.9rem;
-    opacity: 0.7;
+    font-weight: 800;
+    font-size: 0.85rem;
+    opacity: 0.6;
     transition: var(--transition);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 0.2rem;
 }
 
 .nav-links a:hover {
@@ -139,21 +140,7 @@ h3,
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 600;
-    font-size: 0.95rem;
-    opacity: 0.8;
-    transition: var(--transition);
-}
-
-.nav-links a:hover {
-    opacity: 1;
-    color: var(--primary);
+    gap: 2.5rem;
 }
 
 /* Hero Section */
