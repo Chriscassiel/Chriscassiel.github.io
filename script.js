@@ -190,10 +190,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    langToggle.addEventListener('click', () => {
-        const nextLang = currentLang === 'it' ? 'es' : 'it';
-        applyLanguage(nextLang);
-    });
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const nextLang = currentLang === 'it' ? 'es' : 'it';
+            applyLanguage(nextLang);
+        });
+    }
 
     // Modal Elements
     const modal = document.getElementById('gallery-modal');
@@ -564,10 +566,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     searchInput.addEventListener('input', filterMotos);
 
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-        document.body.classList.toggle('light-theme');
-    });
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            document.body.classList.toggle('light-theme');
+        });
+    }
 
     // --- TRENDS LOGIC ---
     async function fetchTrends() {
