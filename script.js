@@ -475,6 +475,25 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderMotos(filtered);
     }
 
+    // --- MOBILE MENU LOGIC ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+
     // --- ACCESSIBILITY WINDOW LOGIC ---
     const accModal = document.getElementById('acc-modal');
     const accBtn = document.getElementById('acc-btn-simple');
@@ -483,12 +502,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     const btnTextSize = document.getElementById('btn-text-size-new');
     const btnDyslexic = document.getElementById('btn-dyslexic-new');
 
-    accBtn.addEventListener('click', () => {
+    accBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         accModal.classList.toggle('active');
     });
 
     accClose.addEventListener('click', () => {
         accModal.classList.remove('active');
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+        if (accModal.classList.contains('active') && !accModal.contains(e.target) && e.target !== accBtn) {
+            accModal.classList.remove('active');
+        }
+    });
+
+    // Prevent closing when clicking inside the content
+    accModal.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
 
     function toggleAccOption(btn, className) {
