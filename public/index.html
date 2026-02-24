@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Verificación Bing -->
+    <meta name="msvalidate.01" content="89D01D0E427C39C3AC35A98218696043" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BH7SRG128C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BH7SRG128C');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO_PLACEHOLDER -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+</head>
+
+<body class="dark-theme">
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="/" class="logo">MOTO<span>CORE</span></a>
+            <ul class="nav-links">
+                <li><a href="/comparador" data-route>Nuevas</a></li>
+                <li><a href="/equipamiento" data-route>Equipamiento</a></li>
+                <li><a href="/segunda-mano" data-route>Segunda Mano</a></li>
+                <li><a href="/motogp" data-route>MotoGP</a></li>
+            </ul>
+            <div class="header-actions">
+                <button id="theme-btn" class="icon-btn">🌓</button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="app">
+        <!-- Dynamic Content Injected Here -->
+        <div class="loader">Grupando pistones...</div>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-grid">
+            <div class="footer-links">
+                <h4>Fuentes Oficiales</h4>
+                <ul>
+                    <li><a href="https://motos.coches.net/fichas_tecnicas/comparar.aspx" target="_blank">Coches.net
+                            (Comparador)</a></li>
+                    <li><a href="https://www.motocard.com/" target="_blank">Motocard (Equipamiento)</a></li>
+                    <li><a href="https://motos.coches.net/" target="_blank">Coches.net (Usadas)</a></li>
+                    <li><a href="https://www.motogp.com/" target="_blank">MotoGP Official</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2026 MotoCore Platform. Diseñado para la excelencia SEO.</p>
+        </div>
+    </footer>
+
+    <!-- Templates -->
+    <template id="tpl-home">
+        <section class="hero-full">
+            <h1>Pasión por las dos ruedas</h1>
+            <p>La plataforma definitiva de comparativas y equipamiento.</p>
+            <div class="hero-grid">
+                <a href="/comparador" class="hero-card">Motos Nuevas</a>
+                <a href="/equipamiento" class="hero-card">Equipamiento</a>
+                <a href="/segunda-mano" class="hero-card">Segunda Mano</a>
+                <a href="/motogp" class="hero-card">MotoGP News</a>
+            </div>
+        </section>
+    </template>
+
+    <template id="tpl-comparador">
+        <section class="section">
+            <div class="header-box">
+                <h2>Comparador de Motos Nuevas</h2>
+                <div class="comparison-bar" id="comparison-bar">
+                    <!-- Comparison slots -->
+                </div>
+            </div>
+            <div class="grid" id="moto-grid"></div>
+        </section>
+    </template>
+
+    <template id="tpl-moto-detail">
+        <section class="detail-page">
+            <div id="moto-content"></div>
+            <div class="official-src">
+                Fuente: <a href="https://motos.coches.net/fichas_tecnicas/comparar.aspx" target="_blank">Ver en
+                    Coches.net</a>
+            </div>
+        </section>
+    </template>
+
+    <script src="/js/config.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>

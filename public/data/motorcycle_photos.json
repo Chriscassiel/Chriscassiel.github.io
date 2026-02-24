@@ -1,0 +1,187 @@
+{
+    "categories": {
+        "Superbike": [
+            {
+                "marca": "BMW",
+                "modelo": "S 1000 RR",
+                "fotos": [
+                    "public/images/models/S 1000 RR.jpg"
+                ]
+            },
+            {
+                "marca": "Ducati",
+                "modelo": "Panigale V4",
+                "fotos": [
+                    "public/images/models/Ducati-MY25-Panigale-V4-Tricolore-overview-hero-1600x1000-01.jpg"
+                ]
+            },
+            {
+                "marca": "Honda",
+                "modelo": "CBR1000RR-R Fireblade SP",
+                "fotos": [
+                    "public/images/models/honda-cbr1000rr-r-fireblade-2024-1103130.jpg"
+                ]
+            },
+            {
+                "marca": "Yamaha",
+                "modelo": "YZF-R1",
+                "fotos": [
+                    "public/images/models/maxresdefault.jpg"
+                ]
+            },
+            {
+                "marca": "Kawasaki",
+                "modelo": "Ninja ZX-10R",
+                "fotos": [
+                    "public/images/models/23MY_NinjaZX10R_WEB_1920x1152px.jpg"
+                ]
+            },
+            {
+                "marca": "Suzuki",
+                "modelo": "GSX-R1000R",
+                "fotos": [
+                    "public/images/models/2zcl8ewxo39jmctwdxzfn5cduc6jxdorzissyl3u.jpg"
+                ]
+            },
+            {
+                "marca": "Kawasaki",
+                "modelo": "Ninja H2 ABS",
+                "fotos": [
+                    "public/images/models/Kawasaki_Ninja_H2.jpg"
+                ]
+            }
+        ],
+        "Naked": [
+            {
+                "marca": "KTM",
+                "modelo": "1390 Super Duke R",
+                "fotos": [
+                    "public/images/models/ktm-1390-super-duke-r-2024-graphics-revel-chalk-1.jpg"
+                ]
+            },
+            {
+                "marca": "Yamaha",
+                "modelo": "MT-09",
+                "fotos": [
+                    "public/images/models/2024-Yamaha-MT09DX-35-EU-Icon_Performance-Studio-001-03.jpg"
+                ]
+            },
+            {
+                "marca": "Ducati",
+                "modelo": "Monster",
+                "fotos": [
+                    "public/images/models/Monster-937-AG-MY22-Model-Preview-1050x650-v06.jpg"
+                ]
+            },
+            {
+                "marca": "Triumph",
+                "modelo": "Street Triple RS",
+                "fotos": [
+                    "public/images/models/Triumph_Street-Triple-RS-2020-6.jpg"
+                ]
+            },
+            {
+                "marca": "Kawasaki",
+                "modelo": "Z900RS",
+                "fotos": [
+                    "public/images/models/Z900rs.jpg"
+                ]
+            },
+            {
+                "marca": "Honda",
+                "modelo": "CB750 Hornet",
+                "fotos": [
+                    "public/images/models/Square-Honda-CB750-Hornet-04.jpg"
+                ]
+            }
+        ],
+        "Trail": [
+            {
+                "marca": "BMW",
+                "modelo": "R 1300 GS",
+                "fotos": [
+                    "public/images/models/BMW-1300-GS_3.jpg"
+                ]
+            },
+            {
+                "marca": "Honda",
+                "modelo": "CRF1100L Africa Twin",
+                "fotos": [
+                    "public/images/models/Honda-Africa-Twin-Adventure-Sports_02.jpg"
+                ]
+            },
+            {
+                "marca": "KTM",
+                "modelo": "1290 Super Adventure R",
+                "fotos": [
+                    "public/images/models/ktm 1290.jpg"
+                ]
+            },
+            {
+                "marca": "Suzuki",
+                "modelo": "V-Strom 1050DE",
+                "fotos": [
+                    "public/images/models/Imagen-de-WhatsApp-2025-12-01-a-las-15.38.13_4ecd610d.jpg"
+                ]
+            },
+            {
+                "marca": "Triumph",
+                "modelo": "Tiger 1200 GT",
+                "fotos": [
+                    "public/images/models/images.jpg"
+                ]
+            },
+            {
+                "marca": "Ducati",
+                "modelo": "Multistrada V4",
+                "fotos": [
+                    "public/images/models/f.elconfidencial.com_original_2ab_4b7_805_2ab4b78054bc0dad2fb1fc1bb3a617c3.jpg"
+                ]
+            }
+        ],
+        "Custom": [
+            {
+                "marca": "Harley-Davidson",
+                "modelo": "Fat Boy 114",
+                "fotos": [
+                    "public/images/models/fatboy.jpg"
+                ]
+            },
+            {
+                "marca": "Indian",
+                "modelo": "Scout Bobber",
+                "fotos": [
+                    "public/images/models/scout bobber.jpg"
+                ]
+            },
+            {
+                "marca": "BMW",
+                "modelo": "R 18",
+                "fotos": [
+                    "public/images/models/BMW R18.jpg"
+                ]
+            },
+            {
+                "marca": "Triumph",
+                "modelo": "Bonneville T120",
+                "fotos": [
+                    "public/images/models/Triumph_Bonneville_IMG_2733.jpg"
+                ]
+            },
+            {
+                "marca": "Royal Enfield",
+                "modelo": "Continental GT 650",
+                "fotos": [
+                    "public/images/models/royal enfield continental.jpg"
+                ]
+            },
+            {
+                "marca": "Ducati",
+                "modelo": "Scrambler Icon",
+                "fotos": [
+                    "public/images/models/Scrambler-single-bike-icon-focus-1080x1080-1.jpg"
+                ]
+            }
+        ]
+    }
+}

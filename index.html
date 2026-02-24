@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Verificación Bing -->
+    <meta name="msvalidate.01" content="89D01D0E427C39C3AC35A98218696043" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BH7SRG128C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BH7SRG128C');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotosComparador - Il miglior comparatore di moto online</title>
+    <meta name="description"
+        content="Confronta le migliori motociclette sul mercato (Superbike, Naked, Trail). Schede tecniche, potenza, cilindrata e prezzi aggiornati.">
+    <meta name="keywords"
+        content="confronto moto, prezzi moto, schede tecniche, motociclette, bmw, ducati, honda, yamaha">
+    <link rel="canonical" href="https://motoscomparador.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://motoscomparador.com/">
+    <meta property="og:title" content="MotosComparador - Scegli la tua prossima destinazione">
+    <meta property="og:description"
+        content="Il confronto definitivo per gli appassionati delle due ruote. Schede tecniche dettagliate e design premium.">
+    <meta property="og:image" content="https://motoscomparador.com/public/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://motoscomparador.com/">
+    <meta property="twitter:title" content="MotosComparador - Il miglior comparatore di moto">
+    <meta property="twitter:description"
+        content="Confronta potenza, cilindrata e prezzo delle migliori moto sul mercato.">
+    <meta property="twitter:image" content="https://motoscomparador.com/public/images/og-image.jpg">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="MotosComparador">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="dark-theme">
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="#footer" class="logo">MOTO<span>COMP</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="navHome">Inizio</a></li>
+                <li><a href="#comparator" data-i18n="navComp">Comparatore</a></li>
+                <li><a href="#news" data-i18n="navNews">Notizie</a></li>
+                <li><a href="trends.html" data-i18n="navTrends">Tendenze</a></li>
+                <li><a href="https://www.motostorm.it/it/" target="_blank" data-i18n="navEquip">Equipaggiamento</a></li>
+            </ul>
+            <div class="nav-actions">
+                <span class="nav-text-action" id="acc-btn-simple" data-i18n="navAcc">Accesibilidad</span>
+                <div class="lang-toggle" id="lang-toggle">
+                    <span id="lang-text">ES</span>
+                </div>
+                <div class="theme-toggle" id="theme-toggle">
+                    <div class="toggle-circle"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title" data-i18n="heroTitle">Domina l'asfalto</h2>
+            <p class="hero-subtitle" data-i18n="heroSub">Il confronto definitivo per gli appassionati delle due ruote.
+            </p>
+            <div class="cta-group">
+                <a href="#comparator" class="btn btn-primary" data-i18n="btnStart">Inizia a confrontare</a>
+                <a href="#featured" class="btn btn-secondary" data-i18n="btnFeatured">Vedi in evidenza</a>
+                <a href="https://www.motostorm.it/it/" target="_blank" class="btn btn-accent"
+                    data-i18n="btnEquip">Compra Equipaggiamento</a>
+                <a href="https://www.moto.it/moto-usate" target="_blank" class="btn btn-outline"
+                    data-i18n="btnUsed">Moto Usate</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <main>
+        <section id="comparator" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="sectionTitle">Trova la tua moto ideale</h2>
+                    <div class="controls">
+                        <div class="search-box">
+                            <input type="text" id="moto-search" placeholder="Cerca per marca o modello..."
+                                data-i18n-placeholder="searchPlaceholder">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="moto-grid" class="moto-grid">
+                    <!-- Cards will be injected by JavaScript -->
+                    <div class="loader" data-i18n="loader">Caricamento macchine...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MotoGP News Section -->
+        <section id="news" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="newsTitle">Ultime Notizie MotoGP 2026</h2>
+                </div>
+                <div id="news-grid" class="news-grid">
+                    <div class="loader" data-i18n="loader">Caricamento notizie...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Tray -->
+        <div id="comparison-tray" class="comparison-tray">
+            <div class="tray-content container">
+                <div class="tray-info">
+                    <span id="tray-count">0</span>/3 <span data-i18n="traySelected">moto selezionate</span>
+                </div>
+                <div id="tray-items" class="tray-items">
+                    <!-- Selection thumbnails -->
+                </div>
+                <div class="tray-actions">
+                    <button id="btn-compare-now" class="btn btn-primary" disabled data-i18n="btnCompareNow">Confronta
+                        ora</button>
+                    <button id="btn-clear-compare" class="btn btn-secondary" data-i18n="btnClear">Pulisci</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer" class="glass-footer">
+        <p data-i18n="footerCopy">&copy; 2026 MotosComparador. Progettato per la velocità.</p>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="main-image-container">
+                    <img id="modal-main-image" src="" alt="Anteprima">
+                </div>
+                <div id="modal-thumbnails" class="thumbnail-grid">
+                    <!-- Thumbnails will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div id="comparison-modal" class="modal">
+        <div class="modal-content comparison-content glass-card wide-modal">
+            <span id="compare-modal-close" class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h2 data-i18n="compModalTitle">Confronto Tecnico</h2>
+            </div>
+            <div class="modal-body">
+                <div id="comparison-table-container" class="comparison-table-responsive">
+                    <!-- Comparison table will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <template id="moto-card-template">
+        <div class="moto-card glass-card" data-id="">
+            <div class="card-image">
+                <img src="" alt="" loading="lazy">
+                <div class="badge-price"></div>
+                <button class="btn-compare-add" title="Aggiungi al comparatore">+</button>
+            </div>
+            <div class="card-info">
+                <h3 class="moto-name"></h3>
+                <p class="moto-brand"></p>
+                <div class="moto-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Motore</span>
+                        <span class="spec-value spec-cc"></span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Potenza</span>
+                        <span class="spec-value spec-hp"></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-card-action btn-gallery">Galleria</button>
+                    <button class="btn btn-card-action btn-compare">Confronta</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MotosComparador",
+      "url": "https://motoscomparador.com",
+      "description": "Herramienta online para comparar especificaciones técnicas de motocicletas.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "MotosComparador"
+      }
+    }
+    </script>
+
+
+
+    <!-- Accessibility Premium Window -->
+    <div id="acc-modal" class="modal">
+        <div class="modal-content glass-card acc-window">
+            <span id="acc-modal-close" class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h2 data-i18n="accTitle">Accessibilità</h2>
+            </div>
+            <div class="acc-grid">
+                <div class="acc-item">
+                    <button class="acc-action-btn" id="btn-contrast-new">
+                        <span class="acc-icon">🌓</span>
+                        <span data-i18n="accContrast">Alto Contrasto</span>
+                    </button>
+                </div>
+                <div class="acc-item">
+                    <button class="acc-action-btn" id="btn-text-size-new">
+                        <span class="acc-icon">A+</span>
+                        <span data-i18n="accTextSize">Texto Grande</span>
+                    </button>
+                </div>
+                <div class="acc-item">
+                    <button class="acc-action-btn" id="btn-dyslexic-new">
+                        <span class="acc-icon">📖</span>
+                        <span data-i18n="accDyslexic">Fuente Lectura</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
