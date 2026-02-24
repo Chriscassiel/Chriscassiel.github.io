@@ -900,3 +900,111 @@ h3,
         height: auto;
     }
 }
+
+/* --- ACCESSIBILITY DROPDOWN --- */
+.nav-actions {
+    position: relative;
+}
+
+#acc-modal.acc-dropdown {
+    position: absolute;
+    top: calc(100% + 15px);
+    right: 0;
+    z-index: 5000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+#acc-modal.acc-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.acc-dropdown-content {
+    width: 280px;
+    padding: 1.2rem !important;
+    background: rgba(20, 20, 20, 0.9) !important;
+    backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 18px !important;
+}
+
+.acc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.acc-header h3 {
+    font-size: 0.9rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+}
+
+.acc-close {
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+
+.acc-grid-small {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+}
+
+.acc-btn-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 0.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+}
+
+.acc-btn-small span[data-i18n] {
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+.acc-icon-small {
+    font-size: 1.1rem;
+}
+
+.acc-btn-small:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+}
+
+.acc-btn-small.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Accessibility Global Overrides */
+body.acc-high-contrast {
+    --primary: #00ff88;
+    background-color: black !important;
+}
+
+body.acc-large-text {
+    font-size: 1.15em;
+}
+
+body.acc-dyslexic * {
+    font-family: 'OpenDyslexic', sans-serif !important;
+}
