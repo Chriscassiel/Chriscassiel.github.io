@@ -80,13 +80,14 @@ h3,
 }
 
 .nav-content {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 3rem;
 }
 
 .logo {
@@ -98,6 +99,7 @@ h3,
     display: flex;
     align-items: center;
     transition: var(--transition);
+    flex-shrink: 0;
 }
 
 .logo span {
@@ -117,19 +119,21 @@ h3,
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 4rem;
+    gap: 3rem;
+    flex-shrink: 0;
 }
 
 .nav-links a {
     text-decoration: none;
     color: inherit;
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     opacity: 0.6;
     transition: var(--transition);
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding: 0.5rem 0.2rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 0.5rem;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -140,7 +144,8 @@ h3,
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
+    flex-shrink: 0;
 }
 
 /* Hero Section */
