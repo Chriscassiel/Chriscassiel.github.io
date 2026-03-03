@@ -13,6 +13,8 @@
     --glass-border: rgba(255, 255, 255, 0.1);
     --nav-height: 80px;
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --primary-gradient: linear-gradient(135deg, #ff3e3e, #ff7e5f);
+    --glass-bg: rgba(255, 255, 255, 0.05);
 }
 
 * {
@@ -1143,8 +1145,9 @@ h3,
     right: 0;
     width: 320px;
     height: 450px;
-    background: var(--glass-bg);
+    background: rgba(20, 20, 20, 0.95);
     backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
     display: flex;
@@ -1154,7 +1157,7 @@ h3,
     visibility: hidden;
     transform: translateY(20px);
     transition: all 0.4s ease;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .bot-container.active {
