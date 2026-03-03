@@ -657,6 +657,5 @@ function initOffers() {
             <p>${currentOffer.desc}</p>
             <a href="equipamiento.html" class="btn btn-primary btn-sm">Ver Ofertas</a>
         </div>
-    `;
 }
 
