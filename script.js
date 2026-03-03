@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const langToggle = document.getElementById('lang-toggle');
     const langText = document.getElementById('lang-text');
 
-    // --- I18N LOGIC ---
     const translations = {
         es: {
             navHome: "Inicio",
@@ -188,6 +187,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    // Initial apply as fast as possible
+    applyLanguage(currentLang);
+
+    await initPhotoDatabase();
+
     if (langToggle) {
         langToggle.addEventListener('click', () => {
             const nextLang = currentLang === 'it' ? 'es' : 'it';
@@ -210,6 +214,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         const countSpan = document.getElementById('tray-count');
         const trayItems = document.getElementById('tray-items');
         const compareBtn = document.getElementById('btn-compare-now');
+
+        if (!tray || !countSpan || !trayItems || !compareBtn) return;
 
         countSpan.textContent = compareList.length;
         trayItems.innerHTML = '';
@@ -266,6 +272,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const container = document.getElementById('comparison-table-container');
         const modal = document.getElementById('comparison-modal');
+        if (!container || !modal) return;
 
         // Calculate "Best" values
         const minPrice = Math.min(...compareList.map(m => m.price));
@@ -406,6 +413,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // --- RENDER LOGIC UPDATE ---
     function renderMotos(motos) {
+        if (!motoGrid) return;
         motoGrid.innerHTML = '';
         const t = translations[currentLang];
         if (motos.length === 0) {
@@ -470,6 +478,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Sorting & Filtering
     function filterMotos() {
+        if (!searchInput || !motoGrid) return;
         const query = searchInput.value.toLowerCase();
 
         let filtered = motoData.filter(moto =>
@@ -589,7 +598,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    applyLanguage(currentLang);
     if (document.getElementById('moto-grid')) renderMotos(motoData);
     if (document.getElementById('trends-container')) fetchTrends();
 
