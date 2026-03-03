@@ -1,36 +1,36 @@
 const motoData = [
     // --- SUPERBIKE ---
-    { id: 1, name: "S 1000 RR", brand: "BMW", cc: 999, hp: 210, price: 21120, type: "Superbike", image: "public/images/models/S 1000 RR.jpg" },
-    { id: 2, name: "Panigale V4", brand: "Ducati", cc: 1103, hp: 215, price: 29890, type: "Superbike", image: "public/images/models/Ducati-MY25-Panigale-V4-Tricolore-overview-hero-1600x1000-01.jpg" },
-    { id: 3, name: "CBR1000RR-R Fireblade SP", brand: "Honda", cc: 1000, hp: 218, price: 29700, type: "Superbike", image: "public/images/models/honda-cbr1000rr-r-fireblade-2024-1103130.jpg" },
-    { id: 4, name: "YZF-R1", brand: "Yamaha", cc: 998, hp: 200, price: 23200, type: "Superbike", image: "public/images/models/maxresdefault.jpg" },
-    { id: 5, name: "Ninja ZX-10R", brand: "Kawasaki", cc: 998, hp: 203, price: 22500, type: "Superbike", image: "public/images/models/23MY_NinjaZX10R_WEB_1920x1152px.jpg" },
-    { id: 6, name: "GSX-R1000R", brand: "Suzuki", cc: 1000, hp: 202, price: 19900, type: "Superbike", image: "public/images/models/2zcl8ewxo39jmctwdxzfn5cduc6jxdorzissyl3u.jpg" },
-    { id: 7, name: "Ninja H2 ABS", brand: "Kawasaki", cc: 998, hp: 231, price: 36000, type: "Superbike", image: "public/images/models/Kawasaki_Ninja_H2.jpg" },
+    { id: 1, name: "S 1000 RR", brand: "BMW", cc: 999, hp: 210, price: 21120, type: "Superbike", image: "images/models/S 1000 RR.jpg" },
+    { id: 2, name: "Panigale V4", brand: "Ducati", cc: 1103, hp: 215, price: 29890, type: "Superbike", image: "images/models/Ducati-MY25-Panigale-V4-Tricolore-overview-hero-1600x1000-01.jpg" },
+    { id: 3, name: "CBR1000RR-R Fireblade SP", brand: "Honda", cc: 1000, hp: 218, price: 29700, type: "Superbike", image: "images/models/honda-cbr1000rr-r-fireblade-2024-1103130.jpg" },
+    { id: 4, name: "YZF-R1", brand: "Yamaha", cc: 998, hp: 200, price: 23200, type: "Superbike", image: "images/models/maxresdefault.jpg" },
+    { id: 5, name: "Ninja ZX-10R", brand: "Kawasaki", cc: 998, hp: 203, price: 22500, type: "Superbike", image: "images/models/23MY_NinjaZX10R_WEB_1920x1152px.jpg" },
+    { id: 6, name: "GSX-R1000R", brand: "Suzuki", cc: 1000, hp: 202, price: 19900, type: "Superbike", image: "images/models/2zcl8ewxo39jmctwdxzfn5cduc6jxdorzissyl3u.jpg" },
+    { id: 7, name: "Ninja H2 ABS", brand: "Kawasaki", cc: 998, hp: 231, price: 36000, type: "Superbike", image: "images/models/Kawasaki_Ninja_H2.jpg" },
 
     // --- NAKED ---
-    { id: 8, name: "1390 Super Duke R", brand: "KTM", cc: 1350, hp: 190, price: 22849, type: "Naked", image: "public/images/models/ktm-1390-super-duke-r-2024-graphics-revel-chalk-1.jpg" },
-    { id: 9, name: "Monster", brand: "Ducati", cc: 937, hp: 111, price: 12490, type: "Naked", image: "public/images/models/Monster-937-AG-MY22-Model-Preview-1050x650-v06.jpg" },
-    { id: 10, name: "MT-09", brand: "Yamaha", cc: 890, hp: 119, price: 11299, type: "Naked", image: "public/images/models/2024-Yamaha-MT09DX-35-EU-Icon_Performance-Studio-001-03.jpg" },
-    { id: 11, name: "Street Triple RS", brand: "Triumph", cc: 765, hp: 128, price: 13195, type: "Naked", image: "public/images/models/Triumph_Street-Triple-RS-2020-6.jpg" },
-    { id: 12, name: "Z900RS", brand: "Kawasaki", cc: 948, hp: 111, price: 13500, type: "Naked", image: "public/images/models/Z900rs.jpg" },
-    { id: 13, name: "CB750 Hornet", brand: "Honda", cc: 755, hp: 92, price: 7900, type: "Naked", image: "public/images/models/Square-Honda-CB750-Hornet-04.jpg" },
+    { id: 8, name: "1390 Super Duke R", brand: "KTM", cc: 1350, hp: 190, price: 22849, type: "Naked", image: "images/models/ktm-1390-super-duke-r-2024-graphics-revel-chalk-1.jpg" },
+    { id: 9, name: "Monster", brand: "Ducati", cc: 937, hp: 111, price: 12490, type: "Naked", image: "images/models/Monster-937-AG-MY22-Model-Preview-1050x650-v06.jpg" },
+    { id: 10, name: "MT-09", brand: "Yamaha", cc: 890, hp: 119, price: 11299, type: "Naked", image: "images/models/2024-Yamaha-MT09DX-35-EU-Icon_Performance-Studio-001-03.jpg" },
+    { id: 11, name: "Street Triple RS", brand: "Triumph", cc: 765, hp: 128, price: 13195, type: "Naked", image: "images/models/Triumph_Street-Triple-RS-2020-6.jpg" },
+    { id: 12, name: "Z900RS", brand: "Kawasaki", cc: 948, hp: 111, price: 13500, type: "Naked", image: "images/models/Z900rs.jpg" },
+    { id: 13, name: "CB750 Hornet", brand: "Honda", cc: 755, hp: 92, price: 7900, type: "Naked", image: "images/models/Square-Honda-CB750-Hornet-04.jpg" },
 
     // --- TRAIL ---
-    { id: 14, name: "R 1300 GS", brand: "BMW", cc: 1300, hp: 145, price: 21290, type: "Trail", image: "public/images/models/BMW-1300-GS_3.jpg" },
-    { id: 15, name: "CRF1100L Africa Twin", brand: "Honda", cc: 1084, hp: 102, price: 15500, type: "Trail", image: "public/images/models/Honda-Africa-Twin-Adventure-Sports_02.jpg" },
-    { id: 16, name: "1290 Super Adventure R", brand: "KTM", cc: 1301, hp: 160, price: 21500, type: "Trail", image: "public/images/models/ktm 1290.jpg" },
-    { id: 17, name: "V-Strom 1050DE", brand: "Suzuki", cc: 1037, hp: 107, price: 15999, type: "Trail", image: "public/images/models/Imagen-de-WhatsApp-2025-12-01-a-las-15.38.13_4ecd610d.jpg" },
-    { id: 18, name: "Tiger 1200 GT", brand: "Triumph", cc: 1160, hp: 150, price: 19650, type: "Trail", image: "public/images/models/images.jpg" },
-    { id: 19, name: "Multistrada V4", brand: "Ducati", cc: 1158, hp: 170, price: 20990, type: "Trail", image: "public/images/models/f.elconfidencial.com_original_2ab_4b7_805_2ab4b78054bc0dad2fb1fc1bb3a617c3.jpg" },
+    { id: 14, name: "R 1300 GS", brand: "BMW", cc: 1300, hp: 145, price: 21290, type: "Trail", image: "images/models/BMW-1300-GS_3.jpg" },
+    { id: 15, name: "CRF1100L Africa Twin", brand: "Honda", cc: 1084, hp: 102, price: 15500, type: "Trail", image: "images/models/Honda-Africa-Twin-Adventure-Sports_02.jpg" },
+    { id: 16, name: "1290 Super Adventure R", brand: "KTM", cc: 1301, hp: 160, price: 21500, type: "Trail", image: "images/models/ktm 1290.jpg" },
+    { id: 17, name: "V-Strom 1050DE", brand: "Suzuki", cc: 1037, hp: 107, price: 15999, type: "Trail", image: "images/models/Imagen-de-WhatsApp-2025-12-01-a-las-15.38.13_4ecd610d.jpg" },
+    { id: 18, name: "Tiger 1200 GT", brand: "Triumph", cc: 1160, hp: 150, price: 19650, type: "Trail", image: "images/models/images.jpg" },
+    { id: 19, name: "Multistrada V4", brand: "Ducati", cc: 1158, hp: 170, price: 20990, type: "Trail", image: "images/models/f.elconfidencial.com_original_2ab_4b7_805_2ab4b78054bc0dad2fb1fc1bb3a617c3.jpg" },
 
     // --- CUSTOM / RETRO ---
-    { id: 20, name: "Fat Boy 114", brand: "Harley-Davidson", cc: 1868, hp: 95, price: 28500, type: "Custom", image: "public/images/models/fatboy.jpg" },
-    { id: 21, name: "Scout Bobber", brand: "Indian", cc: 1133, hp: 100, price: 15690, type: "Custom", image: "public/images/models/scout bobber.jpg" },
-    { id: 22, name: "Bonneville T120", brand: "Triumph", cc: 1200, hp: 80, price: 14250, type: "Retro", image: "public/images/models/Triumph_Bonneville_IMG_2733.jpg" },
-    { id: 23, name: "Continental GT 650", brand: "Royal Enfield", cc: 648, hp: 47, price: 7400, type: "Retro", image: "public/images/models/royal enfield continental.jpg" },
-    { id: 24, name: "Scrambler Icon", brand: "Ducati", cc: 803, hp: 73, price: 10990, type: "Retro", image: "public/images/models/Scrambler-single-bike-icon-focus-1080x1080-1.jpg" },
-    { id: 25, name: "R 18", brand: "BMW", cc: 1802, hp: 91, price: 22900, type: "Custom", image: "public/images/models/BMW R18.jpg" }
+    { id: 20, name: "Fat Boy 114", brand: "Harley-Davidson", cc: 1868, hp: 95, price: 28500, type: "Custom", image: "images/models/fatboy.jpg" },
+    { id: 21, name: "Scout Bobber", brand: "Indian", cc: 1133, hp: 100, price: 15690, type: "Custom", image: "images/models/scout bobber.jpg" },
+    { id: 22, name: "Bonneville T120", brand: "Triumph", cc: 1200, hp: 80, price: 14250, type: "Retro", image: "images/models/Triumph_Bonneville_IMG_2733.jpg" },
+    { id: 23, name: "Continental GT 650", brand: "Royal Enfield", cc: 648, hp: 47, price: 7400, type: "Retro", image: "images/models/royal enfield continental.jpg" },
+    { id: 24, name: "Scrambler Icon", brand: "Ducati", cc: 803, hp: 73, price: 10990, type: "Retro", image: "images/models/Scrambler-single-bike-icon-focus-1080x1080-1.jpg" },
+    { id: 25, name: "R 18", brand: "BMW", cc: 1802, hp: 91, price: 22900, type: "Custom", image: "images/models/BMW R18.jpg" }
 ];
 
 let photoDatabase = null;
@@ -38,7 +38,7 @@ let photoDatabase = null;
 // Fetch Photo Database
 async function initPhotoDatabase() {
     try {
-        const response = await fetch('public/data/motorcycle_photos.json');
+        const response = await fetch('data/motorcycle_photos.json');
         photoDatabase = await response.json();
     } catch (error) {
         console.error("Error loading photo database:", error);
@@ -92,7 +92,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             newsTitle: "Últimas Noticias MotoGP 2026",
             readMore: "Leer más",
             btnNews: "Noticias MotoGP",
-            btnNews: "Noticias MotoGP",
             navAcc: "Accesibilidad",
             navTrends: "Tendencias",
             trendsHeroTitle: "Tendencias <span>Globales</span>",
@@ -136,7 +135,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             newsTitle: "Ultime Notizie MotoGP 2026",
             readMore: "Leggi di più",
             btnNews: "Notizie MotoGP",
-            btnNews: "Notizie MotoGP",
             navAcc: "Accessibilità",
             navTrends: "Tendenze",
             trendsHeroTitle: "Tendenze <span>Globali</span>",
@@ -147,13 +145,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     };
 
-    let currentLang = localStorage.getItem('motosLang') || 'it';
+    let currentLang = localStorage.getItem('motosLang') || 'es';
 
     function applyLanguage(lang) {
         currentLang = lang;
         localStorage.setItem('motosLang', lang);
         document.documentElement.lang = lang;
-        langText.textContent = lang.toUpperCase();
+        if (langText) langText.textContent = lang.toUpperCase();
 
         const t = translations[lang];
 
@@ -226,7 +224,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const item = document.createElement('div');
             item.className = 'tray-item';
             item.innerHTML = `
-                <img src="${moto.image}" alt="${moto.name}">
+                <img src="${moto.image}" alt="${moto.brand} ${moto.name}" loading="lazy">
                 <div class="tray-item-remove" data-id="${moto.id}">×</div>
             `;
             item.querySelector('.tray-item-remove').addEventListener('click', () => {
@@ -453,12 +451,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // --- EVENT LISTENERS ---
-    document.getElementById('btn-compare-now').addEventListener('click', showComparison);
-    document.getElementById('btn-clear-compare').addEventListener('click', () => {
+    const btnCompareNow = document.getElementById('btn-compare-now');
+    if (btnCompareNow) btnCompareNow.addEventListener('click', showComparison);
+
+    const btnClearCompare = document.getElementById('btn-clear-compare');
+    if (btnClearCompare) btnClearCompare.addEventListener('click', () => {
         compareList = [];
         updateComparisonTray();
     });
-    document.getElementById('compare-modal-close').addEventListener('click', () => {
+
+    const compareModalClose = document.getElementById('compare-modal-close');
+    if (compareModalClose) compareModalClose.addEventListener('click', () => {
         document.getElementById('comparison-modal').classList.remove('active');
         document.body.style.overflow = 'auto';
     });
@@ -477,67 +480,35 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderMotos(filtered);
     }
 
-    // --- MOBILE MENU LOGIC ---
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const navLinks = document.getElementById('nav-links');
-
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenuBtn.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // Close menu on link click
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenuBtn.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    }
-
     // --- ACCESSIBILITY WINDOW LOGIC ---
-    const accModal = document.getElementById('accessibility-dropdown');
+    const accModal = document.getElementById('acc-modal');
     const accBtn = document.getElementById('acc-btn-simple');
     const accClose = document.getElementById('acc-modal-close');
     const btnContrast = document.getElementById('btn-contrast-new');
     const btnTextSize = document.getElementById('btn-text-size-new');
     const btnDyslexic = document.getElementById('btn-dyslexic-new');
 
-    if (accBtn && accModal) {
-        accBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
+    if (accBtn) {
+        accBtn.addEventListener('click', () => {
             accModal.classList.toggle('active');
         });
+    }
 
-        if (accClose) {
-            accClose.addEventListener('click', () => {
-                accModal.classList.remove('active');
-            });
-        }
-
-        // Close on click outside
-        document.addEventListener('click', (e) => {
-            if (accModal.classList.contains('active') && !accModal.contains(e.target) && e.target !== accBtn) {
-                accModal.classList.remove('active');
-            }
-        });
-
-        // Prevent closing when clicking inside the content
-        accModal.addEventListener('click', (e) => {
-            e.stopPropagation();
+    if (accClose) {
+        accClose.addEventListener('click', () => {
+            accModal.classList.remove('active');
         });
     }
 
     function toggleAccOption(btn, className) {
         const isActive = document.body.classList.toggle(className);
-        btn.classList.toggle('active', isActive);
+        if (btn) btn.classList.toggle('active', isActive);
         localStorage.setItem(className, isActive);
     }
 
-    btnContrast.addEventListener('click', () => toggleAccOption(btnContrast, 'acc-high-contrast'));
-    btnTextSize.addEventListener('click', () => toggleAccOption(btnTextSize, 'acc-large-text'));
-    btnDyslexic.addEventListener('click', () => toggleAccOption(btnDyslexic, 'acc-dyslexic'));
+    if (btnContrast) btnContrast.addEventListener('click', () => toggleAccOption(btnContrast, 'acc-high-contrast'));
+    if (btnTextSize) btnTextSize.addEventListener('click', () => toggleAccOption(btnTextSize, 'acc-large-text'));
+    if (btnDyslexic) btnDyslexic.addEventListener('click', () => toggleAccOption(btnDyslexic, 'acc-dyslexic'));
 
     // Loading states
     if (localStorage.getItem('acc-high-contrast') === 'true') {
@@ -564,7 +535,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     translations.it.accTextSize = "Testo Grande";
     translations.it.accDyslexic = "Caratte Lettura";
 
-    searchInput.addEventListener('input', filterMotos);
+    if (searchInput) searchInput.addEventListener('input', filterMotos);
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
@@ -601,6 +572,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         trends.forEach(item => {
             const card = document.createElement('div');
             card.className = 'glass-card trend-card';
+            card.style.padding = '2.5rem';
+            card.style.marginBottom = '2rem';
 
             card.innerHTML = `
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem;">
@@ -619,4 +592,63 @@ document.addEventListener('DOMContentLoaded', async () => {
     applyLanguage(currentLang);
     if (document.getElementById('moto-grid')) renderMotos(motoData);
     if (document.getElementById('trends-container')) fetchTrends();
+
+    // Initialize Global Features
+    checkAdBlock();
+    initOffers();
 });
+/**
+ * AdBlock Solution: Fallback for promotional content
+ */
+function checkAdBlock() {
+    const testAd = document.createElement('div');
+    testAd.innerHTML = '&nbsp;';
+    testAd.className = 'ad-banner adsbox ads google-ads-container';
+    testAd.style.position = 'absolute';
+    testAd.style.left = '-999px';
+    document.body.appendChild(testAd);
+
+    window.setTimeout(() => {
+        if (testAd.offsetHeight === 0) {
+            console.log('AdBlock detected. Showing in-house fallbacks.');
+            document.querySelectorAll('.fallback-promo').forEach(el => el.style.display = 'block');
+        }
+        testAd.remove();
+    }, 100);
+}
+
+/**
+ * Dynamic Offers Logic: Seasonal & Daily Deals
+ */
+const seasonalOffers = [
+    { start: "03-01", end: "05-31", title: "Oferta de Primavera", desc: "20% dto. en equipamiento de lluvia y guantes ligeros." },
+    { start: "06-01", end: "08-31", title: "Oferta de Verano", desc: "Chaquetas ventiladas con 15% de descuento directo." },
+    { start: "11-01", end: "12-31", title: "Oferta de Invierno", desc: "Protección térmica y puños calefactables al mejor precio." }
+];
+
+function initOffers() {
+    const offersContainer = document.getElementById('dynamic-offers');
+    if (!offersContainer) return;
+
+    const today = new Date();
+    const mmdd = `${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+    let currentOffer = { title: "Oferta Diaria", desc: "¡10% de descuento en tu primera comparación hoy!" };
+
+    for (const offer of seasonalOffers) {
+        if (mmdd >= offer.start && mmdd <= offer.end) {
+            currentOffer = offer;
+            break;
+        }
+    }
+
+    offersContainer.innerHTML = `
+        <div class="glass-card promo-spotlight">
+            <span class="promo-tag">ESPECIAL</span>
+            <h3>${currentOffer.title}</h3>
+            <p>${currentOffer.desc}</p>
+            <a href="equipamiento.html" class="btn btn-primary btn-sm">Ver Ofertas</a>
+        </div>
+    `;
+}
+

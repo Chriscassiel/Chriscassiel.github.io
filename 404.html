@@ -1,18 +1,263 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <title>MOTOCOMPARADOR | Redirigiendo...</title>
-    <script type="text/javascript">
-        // Redirect back to the root index.html
-        // This is a simple fix for GitHub Pages 404s
-        window.location.href = "/";
+    <meta charset="UTF-8">
+
+    <!-- Verificación Bing -->
+    <meta name="msvalidate.01" content="89D01D0E427C39C3AC35A98218696043" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BH7SRG128C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BH7SRG128C');
     </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTOCOMPARADOR - El mejor comparador de motos online</title>
+    <meta name="description"
+        content="Confronta le migliori motociclette sul mercato (Superbike, Naked, Trail). Schede tecniche, potenza, cilindrata e prezzi aggiornati.">
+    <meta name="keywords"
+        content="confronto moto, prezzi moto, schede tecniche, motociclette, bmw, ducati, honda, yamaha">
+    <link rel="canonical" href="https://chriscassiel.github.io/404.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chriscassiel.github.io/404.html">
+    <meta property="og:title" content="404 - Página no encontrada - MOTOCOMPARADOR">
+    <meta property="og:description"
+        content="Il confronto definitivo per gli appassionati delle due ruote. Schede tecniche dettagliate e design premium.">
+    <meta property="og:image" content="https://chriscassiel.github.io/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chriscassiel.github.io/404.html">
+    <meta property="twitter:title" content="MotosComparador - Il miglior comparatore di moto">
+    <meta property="twitter:description"
+        content="Confronta potenza, cilindrata e prezzo delle migliori moto sul mercato.">
+    <meta property="twitter:image" content="https://chriscassiel.github.io/images/og-image.jpg">
+
+    <!-- Robots -->
+    <meta name="robots" content="noindex, follow">
+    <meta name="author" content="MotosComparador">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
-    <p>Redirigiendo a la página principal...</p>
+<body class="dark-theme">
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="#footer" class="logo">MOTO<span>COMPARADOR</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="navHome">Inicio</a></li>
+                <li><a href="comparador.html" data-i18n="navComp">Comparador</a></li>
+                <li><a href="noticias.html" data-i18n="navNews">Noticias</a></li>
+                <li><a href="tendencias.html" data-i18n="navTrends">Tendencias</a></li>
+                <li><a href="equipamiento.html" data-i18n="navEquip">Equipamiento</a></li>
+            </ul>
+            <div class="nav-actions">
+                <span class="nav-text-action" id="acc-btn-simple" data-i18n="navAcc">Accesibilidad</span>
+                <div class="lang-toggle" id="lang-toggle">
+                    <span id="lang-text">ES</span>
+                </div>
+
+                <!-- Accessibility Dropdown -->
+                <div id="acc-modal" class="acc-dropdown">
+                    <div class="acc-dropdown-content glass-card">
+                        <div class="acc-header">
+                            <h3 data-i18n="accTitle">Accesibilidad</h3>
+                            <span id="acc-modal-close" class="acc-close">&times;</span>
+                        </div>
+                        <div class="acc-grid-small">
+                            <button class="acc-btn-small" id="btn-contrast-new" title="Alto Contraste">
+                                <span class="acc-icon-small">🌓</span>
+                                <span data-i18n="accContrast">Contraste</span>
+                            </button>
+                            <button class="acc-btn-small" id="btn-text-size-new" title="Texto Grande">
+                                <span class="acc-icon-small">A+</span>
+                                <span data-i18n="accTextSize">Texto</span>
+                            </button>
+                            <button class="acc-btn-small" id="btn-dyslexic-new" title="Fuente Lectura">
+                                <span class="acc-icon-small">📖</span>
+                                <span data-i18n="accDyslexic">Lectura</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="theme-toggle" id="theme-toggle">
+                    <div class="toggle-circle"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="container error-page">
+            <div class="error-code">404</div>
+            <h1 class="hero-title">¡Ups! Te has salido de la pista</h1>
+            <p class="hero-subtitle">La página que buscas no existe o ha sido movida.</p>
+            <div class="cta-group">
+                <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.5;">Redirigiendo automáticamente en <span id="countdown">10</span>
+                segundos...</p>
+        </section>
+
+        <script>
+            let seconds = 10;
+            const countdownEl = document.getElementById('countdown');
+            setInterval(() => {
+                seconds--;
+                if (countdownEl) countdownEl.textContent = seconds;
+                if (seconds <= 0) window.location.href = 'index.html';
+            }, 1000);
+        </script>
+    </main>
+
+    <footer id="footer" class="glass-footer" role="contentinfo">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">MOTO<span>COMPARADOR</span></a>
+                <p data-i18n="footerCopy">&copy; 2026 MOTOCOMPARADOR. Diseñado para la velocidad.</p>
+            </div>
+            <div class="footer-nav">
+                <h4 data-i18n="footerNavTitle">Navegación Rápida</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="comparador.html">Comparador</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="tendencias.html">Tendencias</a></li>
+                    <li><a href="equipamiento.html">Equipamiento</a></li>
+                </ul>
+            </div>
+            <div class="footer-social-links">
+                <h4 data-i18n="footerSocialTitle">Redes Sociales</h4>
+                <div class="social-icons">
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube">YouTube</a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content glass-card">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <div class="main-image-container">
+                    <img id="modal-main-image" src="" alt="Anteprima">
+                </div>
+                <div id="modal-thumbnails" class="thumbnail-grid">
+                    <!-- Thumbnails will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Modal -->
+    <div id="comparison-modal" class="modal">
+        <div class="modal-content comparison-content glass-card wide-modal">
+            <span id="compare-modal-close" class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h2 data-i18n="compModalTitle">Comparativa Técnica</h2>
+            </div>
+            <div class="modal-body">
+                <div id="comparison-table-container" class="comparison-table-responsive">
+                    <!-- Comparison table will be injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <template id="moto-card-template">
+        <div class="moto-card glass-card" data-id="">
+            <div class="card-image">
+                <img src="" alt="" loading="lazy">
+                <div class="badge-price"></div>
+                <button class="btn-compare-add" title="Añadir al comparador">+</button>
+            </div>
+            <div class="card-info">
+                <h3 class="moto-name"></h3>
+                <p class="moto-brand"></p>
+                <div class="moto-specs">
+                    <div class="spec-item">
+                        <span class="spec-label">Motor</span>
+                        <span class="spec-value spec-cc"></span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Potenza</span>
+                        <span class="spec-value spec-hp"></span>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-card-action btn-gallery">Galería</button>
+                    <button class="btn btn-card-action btn-compare">Comparar</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MotosComparador",
+      "url": "https://chriscassiel.github.io/",
+      "description": "Herramienta online para comparar especificaciones técnicas de motocicletas.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "MotosComparador"
+      }
+    }
+    </script>
+
+
+
+
+    <!-- MOTO-BOT Widget -->
+    <div class="bot-widget">
+        <button id="bot-toggle" aria-label="Abrir asistente virtual" title="Asistente MOTO-BOT">🤖</button>
+        <div id="bot-container" class="bot-container">
+            <div class="bot-header">
+                <h3>MOTO-BOT</h3>
+                <span id="bot-close" class="bot-close">&times;</span>
+            </div>
+            <div id="bot-messages">
+                <div class="bot-msg bot">¿Qué quieres ahora? No pienso ayudarte en nada.</div>
+            </div>
+            <div class="bot-input-area">
+                <input type="text" id="bot-input" placeholder="Pregúntame algo...">
+                <button id="bot-send">Ir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="js/bot.js"></script>
 </body>
 
 </html>

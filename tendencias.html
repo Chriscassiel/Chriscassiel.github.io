@@ -7,7 +7,26 @@
     <!-- Verificación Bing -->
     <meta name="msvalidate.01" content="89D01D0E427C39C3AC35A98218696043" />
 
-    <!-- Google Analytics -->
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://chriscassiel.github.io/index.html"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tendencias",
+        "item": "https://chriscassiel.github.io/tendencias.html"
+      }]
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BH7SRG128C"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -16,52 +35,27 @@
         gtag('config', 'G-BH7SRG128C');
     </script>
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "MOTOCOMPARADOR",
-      "url": "https://chriscassiel.github.io/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://chriscassiel.github.io/comparador.html?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "MOTOCOMPARADOR",
-      "url": "https://chriscassiel.github.io/",
-      "logo": "https://chriscassiel.github.io/images/logo.png"
-    }
-    </script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOTOCOMPARADOR - El mejor comparador de motos online</title>
     <meta name="description"
         content="Confronta le migliori motociclette sul mercato (Superbike, Naked, Trail). Schede tecniche, potenza, cilindrata e prezzi aggiornati.">
     <meta name="keywords"
         content="confronto moto, prezzi moto, schede tecniche, motociclette, bmw, ducati, honda, yamaha">
-    <link rel="canonical" href="https://chriscassiel.github.io/index.html">
+    <link rel="canonical" href="https://chriscassiel.github.io/tendencias.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chriscassiel.github.io/index.html">
-    <meta property="og:title" content="MOTOCOMPARADOR - El mejor comparador de motos online">
-    <meta property="og:description"
-        content="Compara las mejores motocicletas del mercado: Superbike, Naked, Trail. Fichas técnicas, potencia y precios actualizados.">
+    <meta property="og:url" content="https://chriscassiel.github.io/tendencias.html">
+    <meta property="og:title" content="Tendencias Motos - MOTOCOMPARADOR">
+    <meta property="og:description" content="Lo que el mundo busca sobre motos hoy según Google Trends.">
     <meta property="og:image" content="https://chriscassiel.github.io/images/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://chriscassiel.github.io/index.html">
-    <meta property="twitter:title" content="MOTOCOMPARADOR - Comparador de Motos">
+    <meta property="twitter:url" content="https://chriscassiel.github.io/tendencias.html">
+    <meta property="twitter:title" content="MotosComparador - Il miglior comparatore di moto">
     <meta property="twitter:description"
-        content="Compara potencia, cilindrada y precio de las mejores motos en MOTOCOMPARADOR.">
+        content="Confronta potenza, cilindrata e prezzo delle migliori moto sul mercato.">
     <meta property="twitter:image" content="https://chriscassiel.github.io/images/og-image.jpg">
 
     <meta http-equiv="Cache-Control" content="public, max-age=31536000">
@@ -132,56 +126,46 @@
         </div>
     </nav>
 
-    <header id="home" class="hero" role="banner">
+    <header class="hero-small">
         <div class="hero-content">
-            <h1 class="hero-title" data-i18n="heroTitle">Domina el asfalto</h1>
-            <p class="hero-subtitle" data-i18n="heroSub">La comparativa definitiva para apasionados de las dos ruedas.
-            </p>
-            <div class="cta-group">
-                <a href="comparador.html" class="btn btn-primary" data-i18n="btnStart"
-                    aria-label="Empezar a comparar motos">Empezar a comparar</a>
-                <a href="equipamiento.html" class="btn btn-accent" data-i18n="btnEquip"
-                    aria-label="Ver equipamiento recomendado">Comprar Equipamiento</a>
-                <a href="https://www.moto-ocasion.com/" target="_blank" class="btn btn-outline" data-i18n="btnUsed"
-                    aria-label="Ver motos de ocasión externas">Motos de Ocasión</a>
-            </div>
+            <h1 class="hero-title" data-i18n="trendsHeroTitle">Tendencias <span>Globales</span></h1>
+            <p class="hero-subtitle" data-i18n="trendsHeroSub">Análisis diario de lo que mueve el mundo hoy a través de
+                los datos de Google Trends.</p>
         </div>
         <div class="hero-overlay"></div>
     </header>
 
     <main>
-        <!-- Featured Section for Home -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Elige tu Pasión</h2>
-                </div>
-                <div class="hero-grid-mini">
-                    <a href="comparador.html" class="glass-card feature-tile">
-                        <h3>Comparador</h3>
-                        <p>Analiza las mejores marcas y modelos del mercado.</p>
-                    </a>
-                    <a href="equipamiento.html" class="glass-card feature-tile">
-                        <h3>Tienda</h3>
-                        <p>El mejor equipamiento para tu seguridad y estilo.</p>
-                    </a>
-                    <a href="noticias.html" class="glass-card feature-tile">
-                        <h3>Noticias</h3>
-                        <p>Toda la actualidad del mundo de las dos ruedas.</p>
-                    </a>
-                </div>
-
-                <!-- Placeholder for Dynamic Offers -->
-                <div id="dynamic-offers"></div>
-
-                <!-- Fallback promo (hidden by default, shown if AdBlock detected) -->
-                <div class="fallback-promo">
-                    <p>💡 ¿Buscas ofertas exclusivas? Mira nuestra <a href="equipamiento.html"
-                            style="color: var(--primary);">sección de equipamiento</a> con precios directos de tienda.
-                    </p>
+        <section class="section container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="trendsSecTitle">Lo más buscado hoy</h2>
+                <div class="controls">
+                    <span id="trends-date" style="font-weight: 800; color: var(--primary);">Cargando fecha...</span>
                 </div>
             </div>
+
+            <div id="trends-container" class="trends-grid">
+                <div class="loader">Analizando tendencias...</div>
+            </div>
         </section>
+    </main>
+
+    <!-- Comparison Tray -->
+    <div id="comparison-tray" class="comparison-tray">
+        <div class="tray-content container">
+            <div class="tray-info">
+                <span id="tray-count">0</span>/3 <span data-i18n="traySelected">motos seleccionadas</span>
+            </div>
+            <div id="tray-items" class="tray-items">
+                <!-- Selection thumbnails -->
+            </div>
+            <div class="tray-actions">
+                <button id="btn-compare-now" class="btn btn-primary" disabled data-i18n="btnCompareNow">Comparar
+                    ahora</button>
+                <button id="btn-clear-compare" class="btn btn-secondary" data-i18n="btnClear">Limpiar</button>
+            </div>
+        </div>
+    </div>
     </main>
 
     <footer id="footer" class="glass-footer" role="contentinfo">
