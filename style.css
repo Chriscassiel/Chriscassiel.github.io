@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --primary: #ff3e3e;
     --primary-glow: rgba(255, 62, 62, 0.4);
     --secondary: #212121;
@@ -1301,17 +1301,15 @@ h3,
 ========================================= */
 .nav-actions {
     position: relative;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    /* .nav-actions already has display:flex etc from earlier in the file */
 }
 
 .acc-dropdown {
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 4rem; /* Offset to avoid covering the ES language toggle */
     margin-top: 1rem;
-    width: 280px;
+    width: 250px; /* Slightly narrower to fit better visually */
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
@@ -1328,11 +1326,16 @@ h3,
 .acc-dropdown-content {
     padding: 1.5rem;
     border-radius: 16px;
-    background: rgba(30, 30, 30, 0.95);
+    background: rgba(20, 20, 20, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    color: var(--text);
+    color: var(--text-primary-dark);
+}
+.light-theme .acc-dropdown-content {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-primary-light);
 }
 
 .acc-header {
@@ -1344,19 +1347,29 @@ h3,
     padding-bottom: 0.5rem;
 }
 
+.light-theme .acc-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .acc-header h3 {
     margin: 0;
     font-size: 1.1rem;
+    color: inherit;
 }
 
 .acc-close {
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--text-muted);
-    transition: color 0.3s ease;
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    background: none;
+    border: none;
+    line-height: 1;
 }
 
 .acc-close:hover {
+    opacity: 1;
     color: var(--primary);
 }
 
@@ -1367,11 +1380,14 @@ h3,
 }
 
 .acc-btn-small {
+    appearance: none;
+    -webkit-appearance: none;
     background: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 0.75rem 0.5rem;
-    color: var(--text);
+    color: inherit;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -1379,16 +1395,23 @@ h3,
     gap: 0.25rem;
     transition: all 0.2s ease;
     font-size: 0.8rem;
+    font-family: inherit;
+}
+
+.light-theme .acc-btn-small {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 .acc-btn-small:hover {
-    background: rgba(255, 60, 60, 0.1);
+    background-color: rgba(255, 62, 62, 0.1);
     border-color: var(--primary);
 }
 
 .acc-btn-small.active {
-    background: var(--primary);
+    background-color: var(--primary);
     border-color: var(--primary);
+    color: white;
 }
 
 .acc-icon-small {
@@ -1397,31 +1420,32 @@ h3,
 
 /* Accessibility Modes */
 body.high-contrast {
-    background: #000;
-    color: #fff;
-    --primary: #ff0000;
+    background-color: #000 !important;
+    color: #0f0 !important;
+    --primary: #0f0;
     --bg-dark: #000;
-    --surface: #111;
-    --text: #fff;
-    --text-muted: #ccc;
-    font-weight: 600;
+    --text-primary-dark: #0f0;
+    --text-secondary-dark: #fff;
+    --glass-border: #0f0;
+    font-weight: bold;
 }
 body.high-contrast .glass-nav, 
 body.high-contrast .glass-card, 
 body.high-contrast .glass-footer {
-    background: #000;
-    border: 2px solid #fff;
-    backdrop-filter: none;
+    background-color: #000 !important;
+    border: 2px solid #0f0 !important;
+    backdrop-filter: none !important;
 }
 
 body.text-large {
-    font-size: 115%;
+    font-size: 115% !important;
 }
 
 body.dyslexic-font {
     font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
 }
 
+/* Additional specificity for the main trigger button */
 .nav-text-action {
     cursor: pointer;
     padding: 0.5rem 1rem;
@@ -1431,6 +1455,12 @@ body.dyslexic-font {
     font-weight: 600;
     transition: background 0.3s;
 }
+.light-theme .nav-text-action {
+    background: rgba(0, 0, 0, 0.05);
+}
 .nav-text-action:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+.light-theme .nav-text-action:hover {
+    background: rgba(0, 0, 0, 0.1);
 }
