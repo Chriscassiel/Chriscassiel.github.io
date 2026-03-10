@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -57,12 +57,12 @@
     <meta property="og:image" content="https://chriscassiel.github.io/images/og-image.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://chriscassiel.github.io/index.html">
-    <meta property="twitter:title" content="MOTOCOMPARADOR - Comparador de Motos">
-    <meta property="twitter:description"
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://chriscassiel.github.io/index.html">
+    <meta name="twitter:title" content="MOTOCOMPARADOR - Comparador de Motos">
+    <meta name="twitter:description"
         content="Compara potencia, cilindrada y precio de las mejores motos en MOTOCOMPARADOR.">
-    <meta property="twitter:image" content="https://chriscassiel.github.io/images/og-image.jpg">
+    <meta name="twitter:image" content="https://chriscassiel.github.io/images/og-image.jpg">
 
     <meta http-equiv="Cache-Control" content="public, max-age=31536000">
     <meta http-equiv="Expires" content="Tue, 01 Jan 2030 00:00:00 GMT">
@@ -75,9 +75,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
         rel="stylesheet">
+
+    <!-- Google AdSense (Para auditoría SEO) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }</style>
 </head>
 
 <body class="dark-theme">
+    
+    <a href="#main-content" class="skip-link" style="position:absolute; top:-40px; left:0; background:#000; color:#fff; padding:8px; z-index:10000; transition:top 0.3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Saltar al contenido principal</a>
     <nav class="glass-nav">
         <div class="nav-content">
             <a href="index.html" class="logo">MOTO<span>COMPARADOR</span></a>
@@ -90,8 +97,8 @@
             </ul>
             <div class="nav-search-container">
                 <form action="https://www.google.com/search" method="get" target="_blank" class="nav-search-form">
-                    <input type="hidden" name="q" value="site:chriscassiel.github.io">
-                    <input type="text" name="q" placeholder="Buscar en la web..." class="nav-search-input">
+                    <label for="hidden-q" class="sr-only" aria-label="Búsqueda oculta"><input type="hidden" name="q" id="hidden-q" value="site:chriscassiel.github.io"></label>
+                    <label for="nav-search" class="sr-only" aria-label="Buscar en la web"><input type="text" name="q" placeholder="Buscar en la web..." id="nav-search" class="nav-search-input"></label>
                     <button type="submit" class="nav-search-btn">🔍</button>
                 </form>
             </div>
@@ -149,7 +156,7 @@
         <div class="hero-overlay"></div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- About Section for SEO -->
         <section class="section bg-light" id="about">
             <div class="container text-center">
@@ -325,7 +332,7 @@
 
 
     <!-- MOTO-BOT Widget -->
-    <div class="bot-widget">
+    <div class="bot-widget chatbot" id="chatbot">
         <button id="bot-toggle" aria-label="Abrir asistente virtual" title="Asistente MOTO-BOT">🤖</button>
         <div id="bot-container" class="bot-container">
             <div class="bot-header">
@@ -336,7 +343,7 @@
                 <div class="bot-msg bot">¿Qué quieres ahora? No pienso ayudarte en nada.</div>
             </div>
             <div class="bot-input-area">
-                <input type="text" id="bot-input" placeholder="Pregúntame algo...">
+                <label for="bot-input" class="sr-only" aria-label="Escribe tu mensaje"><input type="text" id="bot-input" placeholder="Pregúntame algo..."></label>
                 <button id="bot-send">Ir</button>
             </div>
         </div>

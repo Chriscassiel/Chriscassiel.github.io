@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -33,12 +33,12 @@
     <meta property="og:image" content="https://chriscassiel.github.io/images/og-image.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://chriscassiel.github.io/404.html">
-    <meta property="twitter:title" content="MotosComparador - Il miglior comparatore di moto">
-    <meta property="twitter:description"
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://chriscassiel.github.io/404.html">
+    <meta name="twitter:title" content="MotosComparador - Il miglior comparatore di moto">
+    <meta name="twitter:description"
         content="Confronta potenza, cilindrata e prezzo delle migliori moto sul mercato.">
-    <meta property="twitter:image" content="https://chriscassiel.github.io/images/og-image.jpg">
+    <meta name="twitter:image" content="https://chriscassiel.github.io/images/og-image.jpg">
 
     <!-- Robots -->
     <meta name="robots" content="noindex, follow">
@@ -51,9 +51,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
         rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <style>.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }</style>
 </head>
 
 <body class="dark-theme">
+    
+    <a href="#main-content" class="skip-link" style="position:absolute; top:-40px; left:0; background:#000; color:#fff; padding:8px; z-index:10000; transition:top 0.3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Saltar al contenido principal</a>
     <nav class="glass-nav">
         <div class="nav-content">
             <a href="index.html" class="logo">MOTO<span>COMPARADOR</span></a>
@@ -101,7 +105,7 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main-content">
         <section class="container error-page">
             <div class="error-code">404</div>
             <h1 class="hero-title">¡Ups! Te has salido de la pista</h1>
@@ -264,7 +268,7 @@
 
 
     <!-- MOTO-BOT Widget -->
-    <div class="bot-widget">
+    <div class="bot-widget chatbot" id="chatbot">
         <button id="bot-toggle" aria-label="Abrir asistente virtual" title="Asistente MOTO-BOT">🤖</button>
         <div id="bot-container" class="bot-container">
             <div class="bot-header">
@@ -275,7 +279,7 @@
                 <div class="bot-msg bot">¿Qué quieres ahora? No pienso ayudarte en nada.</div>
             </div>
             <div class="bot-input-area">
-                <input type="text" id="bot-input" placeholder="Pregúntame algo...">
+                <label for="bot-input" class="sr-only" aria-label="Escribe tu mensaje"><input type="text" id="bot-input" placeholder="Pregúntame algo..."></label>
                 <button id="bot-send">Ir</button>
             </div>
         </div>
