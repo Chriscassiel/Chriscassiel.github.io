@@ -106,21 +106,46 @@
             <div class="error-code">404</div>
             <h1 class="hero-title">¡Ups! Te has salido de la pista</h1>
             <p class="hero-subtitle">La página que buscas no existe o ha sido movida.</p>
-            <div class="cta-group">
+            
+            <div class="cta-group" style="justify-content: center; margin-bottom: 3rem;">
                 <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+                <a href="comparador.html" class="btn btn-outline">Ir al Comparador</a>
             </div>
-            <p style="margin-top: 2rem; opacity: 0.5;">Redirigiendo automáticamente en <span id="countdown">10</span>
-                segundos...</p>
+
+            <div class="shortcut-links glass-card" style="padding: 2rem; max-width: 600px; margin: 0 auto; text-align: left;">
+                <h3 style="margin-bottom: 1rem; color: var(--primary);">Enlaces de interés:</h3>
+                <ul style="list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <li><a href="noticias.html" style="color: inherit;">🏁 Últimas Noticias</a></li>
+                    <li><a href="tendencias.html" style="color: inherit;">📈 Tendencias</a></li>
+                    <li><a href="equipamiento.html" style="color: inherit;">🛡️ Equipamiento</a></li>
+                    <li><a href="index.html#about" style="color: inherit;">📖 Sobre Nosotros</a></li>
+                </ul>
+            </div>
+
+            <p style="margin-top: 3rem; opacity: 0.5;">
+                Redirigiendo automáticamente en <span id="countdown">10</span> segundos...
+                <br>
+                <button onclick="stopRedirection()" class="btn btn-sm" style="margin-top: 1rem; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.2);">Detener cuenta atrás</button>
+            </p>
         </section>
 
         <script>
             let seconds = 10;
             const countdownEl = document.getElementById('countdown');
-            setInterval(() => {
+            let interval = setInterval(() => {
                 seconds--;
                 if (countdownEl) countdownEl.textContent = seconds;
-                if (seconds <= 0) window.location.href = 'index.html';
+                if (seconds <= 0) {
+                    clearInterval(interval);
+                    window.location.href = 'index.html';
+                }
             }, 1000);
+
+            function stopRedirection() {
+                clearInterval(interval);
+                const p = countdownEl.parentElement;
+                p.innerHTML = "Redirección automática detenida. ¡Tómate tu tiempo!";
+            }
         </script>
     </main>
 
