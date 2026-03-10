@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --primary: #ff3e3e;
     --primary-glow: rgba(255, 62, 62, 0.4);
     --secondary: #212121;
@@ -1295,4 +1295,142 @@ h3,
 .btn-sm {
     padding: 8px 20px;
     font-size: 0.85rem;
+}
+/* =========================================
+   Accessibility Dropdown Fix
+========================================= */
+.nav-actions {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.acc-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 1rem;
+    width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.acc-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.acc-dropdown-content {
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: rgba(30, 30, 30, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: var(--text);
+}
+
+.acc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.acc-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.acc-close {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.acc-close:hover {
+    color: var(--primary);
+}
+
+.acc-grid-small {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+
+.acc-btn-small {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 0.5rem;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+    font-size: 0.8rem;
+}
+
+.acc-btn-small:hover {
+    background: rgba(255, 60, 60, 0.1);
+    border-color: var(--primary);
+}
+
+.acc-btn-small.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.acc-icon-small {
+    font-size: 1.2rem;
+}
+
+/* Accessibility Modes */
+body.high-contrast {
+    background: #000;
+    color: #fff;
+    --primary: #ff0000;
+    --bg-dark: #000;
+    --surface: #111;
+    --text: #fff;
+    --text-muted: #ccc;
+    font-weight: 600;
+}
+body.high-contrast .glass-nav, 
+body.high-contrast .glass-card, 
+body.high-contrast .glass-footer {
+    background: #000;
+    border: 2px solid #fff;
+    backdrop-filter: none;
+}
+
+body.text-large {
+    font-size: 115%;
+}
+
+body.dyslexic-font {
+    font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif !important;
+}
+
+.nav-text-action {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.nav-text-action:hover {
+    background: rgba(255, 255, 255, 0.2);
 }

@@ -1,4 +1,4 @@
-const motoData = [
+﻿const motoData = [
     // --- SUPERBIKE ---
     { id: 1, name: "S 1000 RR", brand: "BMW", cc: 999, hp: 210, price: 21120, type: "Superbike", image: "images/models/S 1000 RR.jpg" },
     { id: 2, name: "Panigale V4", brand: "Ducati", cc: 1103, hp: 215, price: 29890, type: "Superbike", image: "images/models/Ducati-MY25-Panigale-V4-Tricolore-overview-hero-1600x1000-01.jpg" },
@@ -660,3 +660,73 @@ function initOffers() {
     `;
 }
 
+
+/* =========================================
+   Accessibility Logic
+========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const accBtnSimple = document.getElementById('acc-btn-simple');
+    const accModal = document.getElementById('acc-modal');
+    const accModalClose = document.getElementById('acc-modal-close');
+
+    if (accBtnSimple && accModal) {
+        accBtnSimple.addEventListener('click', (e) => {
+            e.stopPropagation();
+            accModal.classList.toggle('active');
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!accModal.contains(e.target) && e.target !== accBtnSimple && accModal.classList.contains('active')) {
+                accModal.classList.remove('active');
+            }
+        });
+
+        if (accModalClose) {
+            accModalClose.addEventListener('click', () => {
+                accModal.classList.remove('active');
+            });
+        }
+    }
+
+    // Toggle logic for accessibility features
+    const btnContrast = document.getElementById('btn-contrast-new');
+    const btnTextSize = document.getElementById('btn-text-size-new');
+    const btnDyslexic = document.getElementById('btn-dyslexic-new');
+
+    if (btnContrast) {
+        btnContrast.addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+            btnContrast.classList.toggle('active');
+            localStorage.setItem('accContrast', document.body.classList.contains('high-contrast'));
+        });
+        if (localStorage.getItem('accContrast') === 'true') {
+            document.body.classList.add('high-contrast');
+            btnContrast.classList.add('active');
+        }
+    }
+
+    if (btnTextSize) {
+        btnTextSize.addEventListener('click', () => {
+            document.body.classList.toggle('text-large');
+            btnTextSize.classList.toggle('active');
+            localStorage.setItem('accTextSize', document.body.classList.contains('text-large'));
+        });
+        if (localStorage.getItem('accTextSize') === 'true') {
+            document.body.classList.add('text-large');
+            btnTextSize.classList.add('active');
+        }
+    }
+
+    if (btnDyslexic) {
+        btnDyslexic.addEventListener('click', () => {
+            document.body.classList.toggle('dyslexic-font');
+            btnDyslexic.classList.toggle('active');
+            localStorage.setItem('accDyslexic', document.body.classList.contains('dyslexic-font'));
+        });
+        if (localStorage.getItem('accDyslexic') === 'true') {
+            document.body.classList.add('dyslexic-font');
+            btnDyslexic.classList.add('active');
+        }
+    }
+});
